@@ -8,7 +8,7 @@
         <version>2.7.7</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.job</groupId>
+    <groupId>com.boot</groupId>
     <artifactId>batch</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>batch</name>
