@@ -1,0 +1,38 @@
+
+spring:
+  # hibernate setting
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl # ?? ??? ??? ??? ????.
+      ddl-auto: update # ???? ???? alter
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDB103Dialect
+        format_sql: true
+
+  # rdb setting
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localHost:3306/db_name?serverTimezone=UTC&characterEncoding=UTF-8&rewriteBatchedStatements=true
+    username:
+    password:
+    hikari:
+      jdbc-url: jdbc:mariadb://localHost:3306/db_name?serverTimezone=UTC&characterEncoding=UTF-8&rewriteBatchedStatements=true
+      #      jdbc-url: jdbc:mysql://localHost:3306/
+      username:
+      password:
+      driver-class-name: org.mariadb.jdbc.Driver
+      maximum-pool-size: 5
+      max-lifetime: 29000
+      connection-timeout: 0
+      data-source-properties:
+        rewriteBatchedStatements: true
+
+  #mongodb setting
+  data:
+    mongodb:
+      uri: mongodb_host
+      database: #db
+      authentication-database: admin
