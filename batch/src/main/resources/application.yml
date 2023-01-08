@@ -1,5 +1,9 @@
 
 spring:
+  #batch setting
+  batch:
+    jdbc:
+      initialize-schema: always #BATCH_JOB_INSTANCE' doesn't exist error ??
   # hibernate setting
   jpa:
     database-platform: org.hibernate.dialect.MariaDB103Dialect
